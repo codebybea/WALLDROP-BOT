@@ -125,3 +125,50 @@ python3 bot.py
 
 Postagem Automática: O bot posta wallpapers a cada 24 horas no canal especificado.
 Postagem Manual: Use o comando !wallpapers no canal para postar wallpapers sob demanda.
+
+Exemplo de postagem no Discord:
+
+```
+🔥 WallDrop: Wallpapers mais hypados do Wallpaper Engine! 🔥
+[Embed]
+Título: Neon Galaxy
+Link: https://steamcommunity.com/sharedfiles/filedetails/?id=123456
+Imagem: [Prévia do wallpaper]
+Rodapé: Powered by WallDrop
+```
+
+## 🛠️ Solução de Problemas
+
+- **Erro: "PrivilegedIntentsRequired**
+  - Certifique-se de ativar a Message Content Intent no Discord Developer Portal.
+- **Erro: "Connection refused"**
+  - Confirme que a API (api.py) está rodando em http://localhost:8000.
+- **Erro: "403 Forbidden (error code: 50001)"**
+  - Verifique as permissões do bot no canal (Enviar Mensagens, Incorporar Links, Ler Mensagens).
+
+- **Wallpapers não aparecem**
+  - Confirme que o wallpapers.json contém dados (rode python3 scraper.py novamente).
+
+## 📝 Notas
+  - O scraping do Steam Workshop deve ser feito com moderação para evitar bloqueios. O script inclui um delay (`sleep`) para reduzir esse risco.
+
+  - O token do Discord no `.env` é sensível. Não o compartilhe e não o envie ao repositório.
+  - Para rodar **24/7**, use ferramentas como `screen` ou `tmux` no Linux:
+
+  *bash*
+  ```
+screen -S api
+python3 api.py
+# Ctrl + A, D para desconectar
+screen -S bot
+python3 bot.py
+# Ctrl + A, D para desconectar
+```
+
+## 🤝 Contribuições
+O WallDrop é um projeto novo que vai passar por várias melhorias, então 
+sinta-se à vontade para abrir issues ou pull requests com melhorias ou correções!
+
+
+## 📜 Licença
+Este projeto ainda não possui uma licença definida. Caso queira utilizá-lo, entre em contato comigo para mais informações.
