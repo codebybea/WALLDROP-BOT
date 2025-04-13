@@ -1,4 +1,4 @@
-# WallDrop 🖼️
+# WallDrop 👽
 
 **WallDrop** é um bot do Discord que coleta os wallpapers mais populares do **Wallpaper Engine** (via Steam Workshop) e os posta automaticamente em um canal do Discord. Ele exibe o título, link, imagem de prévia e um rodapé em um embed elegante.
 
