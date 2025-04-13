@@ -1,0 +1,6 @@
+# Arquivos e pastas a serem ignorados
+venv/
+.env
+wallpapers.json
+__pycache__/
+*.pyc
